@@ -2,6 +2,7 @@ import { Suspense, useState } from 'react';
 import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { getJobItems } from 'utils/getJobItems';
+import { JobDetails } from './JobDetails/JobDetails';
 import { JobList } from './JobList/JobList';
 
 export const App = () => {
@@ -17,7 +18,7 @@ export const App = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<JobList jobItems={jobItems} />} />
-        <Route path="/movies" element={null} />
+        <Route path="/:id" element={<JobDetails jobItems={jobItems} />} />
       </Routes>
     </Suspense>
   );
