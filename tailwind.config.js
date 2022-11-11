@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         'color-job-title': '#3A4562',
         'color-job-info': '#878D9D',
+        'color-background': '#F5F5F5',
       },
     },
   },

@@ -4,7 +4,7 @@ export const getRandomStars = () => {
   let randomNumber = Math.floor(Math.random() * 6);
   const stars = [];
   while (randomNumber > 0) {
-    stars.push(<AiFillStar size="22px" />);
+    stars.push(<AiFillStar size="22px" viewBox="200 0 650 900" />);
     randomNumber -= 1;
   }
 

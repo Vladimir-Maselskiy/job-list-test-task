@@ -13,7 +13,7 @@ export const App = () => {
   }, []);
 
   return (
-    <div className="border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">
+    <div className="border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">
       <JobList jobItems={jobItems} />
     </div>
   );
