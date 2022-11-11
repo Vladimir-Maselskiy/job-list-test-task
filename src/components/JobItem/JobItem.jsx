@@ -7,7 +7,11 @@ export const JobItem = ({ jobItem }) => {
   return (
     <li className="flex px-4 py-6 rounded-lg mt-2 bg-[#ffffff] hover:cursor-pointer">
       <div className=" block shrink-0 w-75 h-75 relative rounded-full overflow-hidden">
-        <img src={jobItem.pictures[0]} className="block w-full h-full" />
+        <img
+          src={jobItem.pictures[0]}
+          alt={jobItem.name}
+          className="block w-full h-full"
+        />
       </div>
       <div className="ml-6 max-w-lg shrink">
         <p className="font-bold text-xl text-color-job-title">

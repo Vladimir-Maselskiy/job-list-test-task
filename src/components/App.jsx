@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { getJobItems } from 'utils/getJobItems';
 import { JobList } from './JobList/JobList';
 
@@ -13,8 +14,11 @@ export const App = () => {
   }, []);
 
   return (
-    <div className="border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">
-      <JobList jobItems={jobItems} />
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<JobList jobItems={jobItems} />} />
+        <Route path="/movies" element={null} />
+      </Routes>
+    </Suspense>
   );
 };
