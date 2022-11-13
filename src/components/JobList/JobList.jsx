@@ -1,11 +1,15 @@
 import { JobItem } from 'components/JobItem/JobItem';
+import { Pagination } from 'components/Pagination/Pagination';
 
 export const JobList = ({ jobItems }) => {
   return (
-    <ul className="bg-color-background px-64 pt-7 pb-16">
-      {jobItems.map(jobItem => {
-        return <JobItem key={jobItem.id} jobItem={jobItem} />;
-      })}
-    </ul>
+    <div className="bg-color-background px-64 pt-7 pb-16 max-xl:px-16">
+      <ul>
+        {jobItems.map(jobItem => {
+          return <JobItem key={jobItem.id} jobItem={jobItem} />;
+        })}
+      </ul>
+      <Pagination />
+    </div>
   );
 };
